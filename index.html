@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AuraStyle | Modern E-Commerce & AI Concierge</title>
+  <meta name="description" content="Production-ready real-time E-Commerce Chatbot web interface with live inventory check, order tracking, and dynamic interactive widgets.">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Fonts: Inter for clean typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========================================================
+       E-COMMERCE STORE BACKGROUND (Contextual Mock Storefront)
+       ======================================================== -->
+  <div class="storefront-page">
+    <!-- Top Announcement Bar -->
+    <div class="store-announcement">
+      <span>🚀 FREE EXPRESS SHIPPING ON ORDERS OVER $75 | USE CODE <strong>AURA20</strong> FOR 20% OFF</span>
+      <span class="announcement-pill">Live Assistant Ready 24/7</span>
+    </div>
+
+    <!-- Store Navigation -->
+    <header class="store-header">
+      <div class="store-container header-inner">
+        <div class="store-brand">
+          <div class="brand-logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">AURA<span>STYLE</span></span>
+            <span class="brand-tagline">Next-Gen Lifestyle & Tech</span>
+          </div>
+        </div>
+
+        <div class="store-search-bar">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="store-search-input" placeholder="Search premium audio, smart watches, tech gear...">
+          <button class="search-btn" id="search-assistant-btn" title="Ask Assistant">
+            <span>Ask Aura</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </button>
+        </div>
+
+        <div class="store-header-actions">
+          <div class="store-user-badge">
+            <div class="user-avatar-small" id="header-user-avatar">SC</div>
+            <div class="user-info-text">
+              <span class="user-greeting">Signed in as</span>
+              <span class="user-name" id="header-user-name">Sarah Connor (VIP)</span>
+            </div>
+          </div>
+          <button class="store-icon-btn" title="View Wishlist">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </button>
+          <button class="store-icon-btn cart-btn" title="Cart">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="cart-count">2</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Store Hero -->
+    <section class="store-hero">
+      <div class="store-container hero-inner">
+        <div class="hero-content">
+          <span class="hero-badge">✨ Autumn Tech Edition 2026</span>
+          <h1 class="hero-title">Intelligent Sound & Sleek Precision.</h1>
+          <p class="hero-subtitle">Experience audio mastered for clarity and workspace peripherals engineered to elevate your daily focus. Have questions? Our real-time AI Concierge is ready.</p>
+          <div class="hero-cta-group">
+            <a href="#featured-products" class="btn-primary-store">Explore Collection</a>
+            <button class="btn-secondary-store" id="hero-open-chat-btn">
+              <span class="dot-pulse-green"></span>
+              <span>Ask AI Concierge Live</span>
+            </button>
+          </div>
+          <div class="hero-perks">
+            <div class="perk-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+              <span>Same-Day Dispatch</span>
+            </div>
+            <div class="perk-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <span>2-Year Full Warranty</span>
+            </div>
+            <div class="perk-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Instant AI Order Lookup</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products Showcase -->
+    <section class="store-container showcase-section" id="featured-products">
+      <div class="section-heading">
+        <div>
+          <h2 class="section-title">Trending Catalog Items</h2>
+          <p class="section-subtitle">Click "Check Stock via Chat" on any product to see the AI query simulation in real time.</p>
+        </div>
+        <div class="filter-pills">
+          <button class="filter-pill active">All Gear</button>
+          <button class="filter-pill">Audio</button>
+          <button class="filter-pill">Workspace</button>
+          <button class="filter-pill">Wearables</button>
+        </div>
+      </div>
+
+      <!-- Store Products Grid (Interactive with Chatbot) -->
+      <div class="products-grid" id="store-products-grid">
+        <!-- Dynamically rendered or pre-populated via JS for full synchronization -->
+      </div>
+    </section>
+  </div>
+
+  <!-- ========================================================
+       FLOATING CHATBOT INTERFACE (The Core Component)
+       ======================================================== -->
+
+  <!-- Floating Launcher Button -->
+  <div class="chat-launcher-wrapper" id="chat-launcher-wrapper">
+    <div class="launcher-tooltip" id="launcher-tooltip">
+      <div class="tooltip-badge">Live DB</div>
+      <span>Need help tracking an order or checking stock?</span>
+      <button class="tooltip-close" id="tooltip-close-btn" aria-label="Close tooltip">&times;</button>
+    </div>
+
+    <button class="chat-launcher-btn" id="chat-launcher-btn" aria-label="Open Aura Concierge Chat" aria-expanded="false">
+      <!-- Unread indicator bubble -->
+      <span class="launcher-unread-badge" id="launcher-unread-badge">1</span>
+      
+      <!-- Open icon (chat bubbles) -->
+      <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+      </svg>
+      
+      <!-- Close icon (X mark) -->
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Chat Window Drawer Container -->
+  <aside class="chat-window" id="chat-window" role="dialog" aria-labelledby="chat-bot-name" aria-hidden="true">
+    
+    <!-- Header Section -->
+    <div class="chat-header">
+      <div class="chat-header-top">
+        <div class="chat-branding">
+          <div class="brand-avatar-container">
+            <div class="brand-avatar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <span class="status-beacon-pulse" title="Live DB Connected"></span>
+          </div>
+          <div class="brand-details">
+            <div class="brand-title-wrap">
+              <h2 class="chat-bot-name" id="chat-bot-name">Aura Concierge</h2>
+              <span class="bot-badge">AI 2.4</span>
+            </div>
+            <div class="status-indicator">
+              <span class="status-dot"></span>
+              <span class="status-text" id="header-status-text">Online • Live DB Connected</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="chat-header-actions">
+          <!-- Audio sound toggle -->
+          <button class="header-action-btn" id="btn-sound-toggle" title="Toggle Sound Feedback" aria-label="Toggle sound feedback">
+            <svg class="icon-sound-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            </svg>
+            <svg class="icon-sound-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <line x1="23" y1="9" x2="17" y2="15"></line>
+              <line x1="17" y1="9" x2="23" y2="15"></line>
+            </svg>
+          </button>
+
+          <!-- Clear Chat history button -->
+          <button class="header-action-btn" id="btn-clear-chat" title="Clear Conversation" aria-label="Clear Conversation">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="3 6 5 6 21 6"></polyline>
+              <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+            </svg>
+          </button>
+
+          <!-- Minimize / Close window button -->
+          <button class="header-action-btn close-chat-btn" id="btn-close-chat" title="Minimize Chat" aria-label="Minimize Chat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Live Test User & Active Order Simulator Switcher -->
+      <div class="chat-context-bar">
+        <label for="user-order-select" class="context-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span>Active Context:</span>
+        </label>
+        <div class="select-wrapper">
+          <select id="user-order-select" title="Switch mock customer profile or active test order">
+            <option value="usr_sarah" selected>Sarah C. (VIP) — #ORD-98231 (In Transit)</option>
+            <option value="usr_alex">Alex Rivera — #ORD-44912 (Delivered)</option>
+            <option value="usr_maya">Maya Lin — #ORD-77104 (Processing)</option>
+            <option value="usr_guest">Guest User — (No active orders)</option>
+          </select>
+          <svg class="select-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Toast Banner (System alerts, order updates, voice status) -->
+    <div class="chat-toast" id="chat-toast" aria-live="polite"></div>
+
+    <!-- Interactive Chat Body -->
+    <div class="chat-body" id="chat-body" tabindex="0">
+      <div class="chat-messages" id="chat-messages">
+        <!-- Messages will be injected here dynamically by app.js -->
+      </div>
+
+      <!-- Animated Typing / Query Indicator Bubble -->
+      <div class="typing-indicator-container" id="typing-indicator" aria-hidden="true" style="display: none;">
+        <div class="bot-avatar-tiny">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div class="typing-bubble">
+          <span class="typing-text-meta" id="typing-action-label">Querying live database</span>
+          <div class="typing-dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Action Chips Sticky Bar -->
+    <div class="quick-chips-wrapper" id="quick-chips-container">
+      <div class="quick-chips-scroll" id="quick-chips-scroll">
+        <!-- Action chips dynamically populated -->
+      </div>
+    </div>
+
+    <!-- Chat Input Area -->
+    <div class="chat-input-area">
+      <form class="chat-input-form" id="chat-input-form" onsubmit="return false;">
+        <!-- Simulated Voice Mic Button -->
+        <button type="button" class="input-util-btn mic-btn" id="btn-voice-input" title="Voice Input (Simulated)">
+          <svg class="icon-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+            <line x1="12" y1="19" x2="12" y2="23"></line>
+            <line x1="8" y1="23" x2="16" y2="23"></line>
+          </svg>
+        </button>
+
+        <!-- Multi-line Expandable Textarea -->
+        <textarea
+          id="chat-textarea"
+          rows="1"
+          placeholder="Ask Aura anything (e.g., 'Track #98231' or 'Stock on Headphones')..."
+          autocomplete="off"
+          spellcheck="false"
+          aria-label="Type your message"></textarea>
+
+        <!-- Send Button -->
+        <button type="button" class="btn-send" id="btn-send-message" aria-label="Send message">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </form>
+      
+      <div class="chat-footer-disclaimer">
+        <span>⚡ Real-Time Mock DB Connected • Press <kbd>Enter</kbd> to send</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Script linking -->
+  <script src="app.js"></script>
+</body>
+</html>
